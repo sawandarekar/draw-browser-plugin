@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Drawing Extension</title>
+  <style>
+    body {
+      width: 200px;
+      padding: 10px;
+    }
+    .tool-btn {
+      width: 32px;
+      height: 32px;
+      margin: 5px;
+      padding: 5px;
+      cursor: pointer;
+      background: none;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .tool-btn:hover {
+      background-color: #f0f0f0;
+    }
+    .tool-btn.active {
+      background-color: #e0e0e0;
+      border-color: #999;
+    }
+    .tool-btn img {
+      width: 24px;
+      height: 24px;
+    }
+    .color-picker {
+      margin-top: 10px;
+    }
+    .separator {
+      height: 0;
+      border-top: 1px solid #ccc;
+      margin: 5px 0;
+    }
+    .button-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="button-container">
+    <button class="tool-btn" id="line">
+      <img src="icons/line.png" alt="Line">
+    </button>
+    <button class="tool-btn" id="circle">
+      <img src="icons/circle.png" alt="Circle">
+    </button>
+    <button class="tool-btn" id="rectangle">
+      <img src="icons/rect.png" alt="Rectangle">
+    </button>
+    <button class="tool-btn" id="freehand">
+      <img src="icons/free.png" alt="Freehand">
+    </button>
+    <div class="separator"></div>
+    <button class="tool-btn" id="clear">
+      <img src="icons/clear.png" alt="Clear">
+    </button>
+  </div>
+  <div class="color-picker">
+    <label for="color">Choose Color:</label>
+    <input type="color" id="color" name="color">
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
