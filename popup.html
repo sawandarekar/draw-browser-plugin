@@ -19,6 +19,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      position: relative;
     }
     .tool-btn:hover {
       background-color: #f0f0f0;
@@ -49,26 +50,26 @@
 </head>
 <body>
   <div class="button-container">
-    <button class="tool-btn" id="line">
+    <button class="tool-btn" id="line" title="Draw Line: Click and drag to create a straight line">
       <img src="icons/line.png" alt="Line">
     </button>
-    <button class="tool-btn" id="circle">
+    <button class="tool-btn" id="circle" title="Draw Circle: Click and drag to set radius">
       <img src="icons/circle.png" alt="Circle">
     </button>
-    <button class="tool-btn" id="rectangle">
+    <button class="tool-btn" id="rectangle" title="Draw Rectangle: Click and drag to set dimensions">
       <img src="icons/rect.png" alt="Rectangle">
     </button>
-    <button class="tool-btn" id="freehand">
+    <button class="tool-btn" id="freehand" title="Freehand Drawing: Click and drag to draw freely">
       <img src="icons/free.png" alt="Freehand">
     </button>
     <div class="separator"></div>
-    <button class="tool-btn" id="clear">
+    <button class="tool-btn" id="clear" title="Clear All: Remove all drawings from the page">
       <img src="icons/clear.png" alt="Clear">
     </button>
   </div>
   <div class="color-picker">
-    <label for="color">Choose Color:</label>
-    <input type="color" id="color" name="color">
+    <label for="color" title="Choose drawing color">Choose Color:</label>
+    <input type="color" id="color" name="color" title="Click to select a color">
   </div>
   <script src="popup.js"></script>
 </body>
